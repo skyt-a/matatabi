@@ -5,11 +5,9 @@
 	let password = '';
 	const createUser = async () => {
 		const res = await createUserWithEmailAndPass(email, password);
-		console.log(res.user.email);
 	};
 	const login = async () => {
 		const res = await signInWithEmailAndPass(email, password);
-		console.log(res.user.email);
 	};
 </script>
 
