@@ -1,0 +1,34 @@
+{
+	"/": [
+		"src/routes/+page.ts",
+		"src/routes/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/api/test": [
+		"src/routes/api/test/+server.ts"
+	],
+	"/api/token": [
+		"src/routes/api/token/+server.ts"
+	],
+	"/app": [
+		"src/routes/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/app/profile": [
+		"src/routes/app/profile/+page.ts",
+		"src/routes/app/profile/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/app/sverdle": [
+		"src/routes/app/sverdle/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/app/sverdle/how-to-play": [
+		"src/routes/app/sverdle/how-to-play/+page.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/login": [
+		"src/routes/login/+page.ts",
+		"src/routes/+layout.server.ts"
+	]
+}
