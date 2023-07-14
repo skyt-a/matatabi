@@ -4,10 +4,23 @@
 	let email = '';
 	let password = '';
 	const createUser = async () => {
-		const res = await createUserWithEmailAndPass(email, password);
+		const res = await fetch(`${import.meta.env.VITE_API_DOMAIN}/createUser`, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({ email, password })
+		});
 	};
 	const login = async () => {
-		const res = await signInWithEmailAndPass(email, password);
+		// const res = await signInWithEmailAndPass(email, password);
+		const res = await fetch(`${import.meta.env.VITE_API_DOMAIN}/login/emailPass`, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({ email, password })
+		});
 	};
 </script>
 

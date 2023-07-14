@@ -378,10 +378,24 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.18.11.tgz#6526c7e1b40d5b9f0a222c6b767c22f6fb97aa57"
   integrity sha512-rQI4cjLHd2hGsM1LqgDI7oOCYbQ6IBOVsX9ejuRMSze0GqXUG2ekwiKkiBU1pRGSeCqFFHxTrcEydB2Hyoz9CA==
 
+"@hono/firebase-auth@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@hono/firebase-auth/-/firebase-auth-1.3.0.tgz#c4d79330cbcf9021ce55f360b5da5d9ac174884f"
+  integrity sha512-NxfYk8+rwqS3w3CwUnF1dWj+xQbqYFJUgH+DT9GxZWvt6MD1Wvzdt3f/c5nH96h9Adzbl1+k4ao6zapFwRpsgg==
+  dependencies:
+    firebase-auth-cloudflare-workers "^1.0.1"
+
 "@iarna/toml@^2.2.5":
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/@iarna/toml/-/toml-2.2.5.tgz#b32366c89b43c6f8cefbdefac778b9c828e3ba8c"
   integrity sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==
+
+"@marplex/flarebase-auth@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@marplex/flarebase-auth/-/flarebase-auth-1.2.0.tgz#7f92ecb00283452076f4ca2fad65faeaa837b74f"
+  integrity sha512-lv+yq5UQ7O3SEXCzunUKFNYPETVwdx6q5Os5/bFq7AbYFxiAF637rbuqNaJE3BRvKkxjaHBP27FwlqZa7U/UIg==
+  dependencies:
+    jose "^4.8.1"
 
 "@miniflare/cache@2.13.0":
   version "2.13.0"
@@ -988,6 +1002,11 @@ fill-range@^7.0.1:
   dependencies:
     to-regex-range "^5.0.1"
 
+firebase-auth-cloudflare-workers@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/firebase-auth-cloudflare-workers/-/firebase-auth-cloudflare-workers-1.0.1.tgz#1cb374bb69eaf2d95e20bcae4685be3b65823a3d"
+  integrity sha512-gkFTpxnsbpRvLo5HGGgK8KvC+El5RmiIKeQCn3guy9vhdGhRcixXMXJ0VoeNWl1MciOgy94KwyhQ3zPKzF2PYg==
+
 fs-constants@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs-constants/-/fs-constants-1.0.0.tgz#6be0de9be998ce16af8afc24497b9ee9b7ccd9ad"
@@ -1132,6 +1151,11 @@ isexe@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
   integrity sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==
+
+jose@^4.8.1:
+  version "4.14.4"
+  resolved "https://registry.yarnpkg.com/jose/-/jose-4.14.4.tgz#59e09204e2670c3164ee24cbfe7115c6f8bff9ca"
+  integrity sha512-j8GhLiKmUAh+dsFXlX1aJCbt5KMibuKb+d7j1JaOJG6s2UjX1PQlW+OKB/sD4a/5ZYF4RcmYmLSndOoU3Lt/3g==
 
 json-diff@0.9.0:
   version "0.9.0"

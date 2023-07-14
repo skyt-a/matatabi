@@ -75,7 +75,8 @@ export const createUserWithEmailAndPass = async (email: string, password: string
 
 export const signInWithEmailAndPass = async (email: string, password: string) => {
 	const auth = getAuth(app);
-	return await signInWithEmailAndPassword(auth, email, password);
+	const result = await signInWithEmailAndPassword(auth, email, password);
+	return result;
 };
 
 export const signOut = async () => {

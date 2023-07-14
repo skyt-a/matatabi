@@ -50,7 +50,7 @@ migrations_dir="drizzle"
 # [[migrations]]
 # tag = "v1"
 # new_classes = ["MyDurableObject"]
-
+"node_compat" = true
 [[d1_databases]]
 binding = "DB" # i.e. available in your Worker on env.DB
 database_name = "matatabi"

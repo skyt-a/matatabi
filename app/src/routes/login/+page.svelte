@@ -1,11 +1,13 @@
 <script lang="ts">
 	import GoogleLoginButton from '../../features/login/components/GoogleLoginButton.svelte';
-	import EmailLoginForm from '../../features/login/components/ EmailLoginForm.svelte';
+	import EmailLoginForm from '../../features/login/components/EmailLoginForm.svelte';
+	export let data;
+
 	const onClickTest = async () => {
-		fetch('/api/test', {
+		fetch(`/api/places`, {
 			method: 'GET',
 			headers: {
-				'Content-Type': 'application/json'
+				'Content-Type': 'application/json;charset=utf-8'
 			}
 		})
 			.then((res) => res.json())
@@ -18,4 +20,5 @@
 	<div class="px-6 sm:px-0 w-full">
 		<GoogleLoginButton />
 	</div>
+	<button on:click={onClickTest}>test</button>
 </div>
