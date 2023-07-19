@@ -9,6 +9,13 @@ const config = {
 	darkMode: 'class',
 
 	theme: {
+		container: {
+			center: true,
+			padding: '2rem',
+			screens: {
+				'2xl': '480px'
+			}
+		},
 		extend: {
 			colors: {
 				primary: {

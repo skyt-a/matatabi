@@ -16,3 +16,12 @@ export const {
 	FIREBASE_SERVICE_ACCOUNT_EMAIL: z.string().min(1),
 	FIREBASE_PROJECT_ID: z.string().min(1),
 });
+
+export type Env = {
+	DATABASE_URL: string;
+	DATABASE_AUTH_TOKEN: string;
+	FIREBASE_API_KEY: string;
+	FIREBASE_PRIVATE_KEY: string;
+	FIREBASE_SERVICE_ACCOUNT_EMAIL: string;
+	FIREBASE_PROJECT_ID: string;
+};

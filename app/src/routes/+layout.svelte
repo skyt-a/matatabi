@@ -21,6 +21,8 @@
 	}
 </script>
 
-<main class="container mx-auto">
-	<slot />
+<main class="bg-slate-300 h-screen">
+	<div class="container mx-auto bg-white">
+		<slot />
+	</div>
 </main>

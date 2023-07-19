@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import { createUserWithEmailAndPass, signInWithEmailAndPass } from '$lib/client/firebase';
 	import { Button, Checkbox, Label, Input } from 'flowbite-svelte';
 	let email = '';
@@ -21,6 +22,7 @@
 			},
 			body: JSON.stringify({ email, password })
 		});
+		goto('/app/profile');
 	};
 </script>
 
