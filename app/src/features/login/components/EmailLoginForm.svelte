@@ -1,21 +1,14 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { createUserWithEmailAndPass, signInWithEmailAndPass } from '$lib/client/firebase';
-	import { Button, Checkbox, Label, Input } from 'flowbite-svelte';
+	import { Button, Label, Input } from 'flowbite-svelte';
 	let email = '';
 	let password = '';
 	const createUser = async () => {
-		const res = await fetch(`${import.meta.env.VITE_API_DOMAIN}/createUser`, {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json'
-			},
-			body: JSON.stringify({ email, password })
-		});
+		goto('/createUser');
 	};
 	const login = async () => {
 		// const res = await signInWithEmailAndPass(email, password);
-		const res = await fetch(`${import.meta.env.VITE_API_DOMAIN}/login/emailPass`, {
+		const res = await fetch(`/api/authed/login`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'

@@ -8,3 +8,11 @@ export const getAuth = ({ FIREBASE_API_KEY, FIREBASE_PRIVATE_KEY, FIREBASE_PROJE
 		privateKey: FIREBASE_PRIVATE_KEY,
 		serviceAccountEmail: FIREBASE_SERVICE_ACCOUNT_EMAIL,
 	});
+
+type FirebaseAuthError = {
+	isError: true;
+	reason: string;
+};
+
+export const isFirebaseAuthError = (target: any): target is FirebaseAuthError =>
+	target.hasOwnProperty('isError') && target.isError === true;

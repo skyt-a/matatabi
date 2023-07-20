@@ -8,6 +8,20 @@
       "when": 1688464565073,
       "tag": "0000_square_amphibian",
       "breakpoints": false
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1689760475424,
+      "tag": "0001_groovy_unicorn",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1689839158251,
+      "tag": "0002_known_manta",
+      "breakpoints": true
     }
   ]
 }

@@ -6,7 +6,9 @@
 		"deploy": "wrangler publish",
 		"start": "wrangler dev --local --persist",
 		"generate": "drizzle-kit generate:sqlite",
-		"up": "drizzle-kit up:sqlite --schema=src/schema.ts"
+		"up": "drizzle-kit up:sqlite --schema=src/schema.ts",
+		"migration": "drizzle-kit generate:sqlite --out migrations --schema src/schema.ts && wrangler d1 migrations apply matatabi --local",
+		"migration:publish": "wrangler d1 migrations apply matatabi && wrangler publish"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20230419.0",

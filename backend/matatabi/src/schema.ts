@@ -1,4 +1,5 @@
-import { integer, sqliteTable, text, numeric } from 'drizzle-orm/sqlite-core';
+import { relations } from 'drizzle-orm';
+import { integer, sqliteTable, text, numeric, SQLiteBoolean } from 'drizzle-orm/sqlite-core';
 
 export const places = sqliteTable('place', {
 	id: integer('id').primaryKey(),
@@ -7,6 +8,7 @@ export const places = sqliteTable('place', {
 	longitude: numeric('longitude').notNull(),
 	description: text('description').notNull(),
 	url: text('url').notNull(),
+	userId: integer('user_id'),
 });
 
 export const users = sqliteTable('user', {
@@ -14,4 +16,12 @@ export const users = sqliteTable('user', {
 	name: text('name').notNull(),
 	email: text('email').notNull(),
 	authId: text('auth_id').notNull(),
+	isInitialized: integer('is_initialized').notNull().default(0),
 });
+
+export const usersRelations = relations(users, ({ one }) => ({
+	invitee: one(places, {
+		fields: [users.id],
+		references: [places.userId],
+	}),
+}));

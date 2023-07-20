@@ -12,7 +12,7 @@ import {
 import { browser } from '$app/environment';
 import { invalidateAll } from '$app/navigation';
 
-const setToken = async (token: string) => {
+export const setToken = async (token: string) => {
 	const options = {
 		method: 'POST',
 		headers: {
@@ -49,7 +49,6 @@ export const initializeFirebase = (options: FirebaseOptions) => {
 	}
 	if (!app) {
 		app = initializeApp(options);
-		listenForAuthChanges();
 	}
 };
 

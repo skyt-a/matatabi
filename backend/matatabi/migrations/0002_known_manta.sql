@@ -1,0 +1,1 @@
+ALTER TABLE user ADD `is_initialized` integer DEFAULT 0 NOT NULL;

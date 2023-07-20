@@ -1,6 +1,13 @@
 <script>
-	import { Card, MenuButton, Dropdown, DropdownItem, Avatar, Button } from 'flowbite-svelte';
+	import { goto } from '$app/navigation';
+	import { signOut as _signOut, setToken } from '$lib/client/firebase';
+	import { Card, Avatar, Button } from 'flowbite-svelte';
 	export let data;
+	const signOut = async () => {
+		await _signOut();
+		await setToken('');
+		goto('/login');
+	};
 </script>
 
 <svelte:head>
@@ -22,7 +29,7 @@
 		<span class="text-sm text-gray-500 dark:text-gray-400">{data.userSession.email}</span>
 		<div class="flex mt-4 space-x-3 lg:mt-6">
 			<Button>Add friend</Button>
-			<Button color="light" class="dark:text-white">Message</Button>
+			<Button color="light" class="dark:text-white" on:click={signOut}>ログアウト</Button>
 		</div>
 	</div>
 </Card>
